@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply font-sans antialiased;
+  }
+}
+
+/* Markdown Styles */
+.prose {
+  @apply text-[#212121];
+}
+
+.prose p {
+  @apply mb-4 last:mb-0;
+}
+
+.prose code {
+  @apply bg-[#f0f0f0] px-1.5 py-0.5 rounded text-[13px] font-mono;
+}
+
+.prose pre {
+  @apply bg-[#1e1e1e] text-[#d4d4d4] p-4 rounded-xl overflow-x-auto my-4;
+}
+
+.prose pre code {
+  @apply bg-transparent p-0 text-inherit;
+}
+
+.prose ul, .prose ol {
+  @apply ml-6 mb-4;
+}
+
+.prose li {
+  @apply mb-1;
+}
+
+.prose h1, .prose h2, .prose h3 {
+  @apply font-semibold mb-4 mt-6 first:mt-0;
+}
